@@ -5,14 +5,16 @@ if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-    elif sys.argv[2] == "+":
-        print("{} + {} = {}".format(int(sys.argv[1]), int(sys.argv[3]), add(int(sys.argv[1]), int(sys.argv[3]))))
+    m = int(sys.argv[1])
+    n = int(sys.argv[3])
+    if sys.argv[2] == "+":
+        print("{} + {} = {}".format(m, n, add(m, n)))
     elif sys.argv[2] == "-":
-        print("{} - {} = {}".format(int(sys.argv[1]), int(sys.argv[3]), sub(int(sys.argv[1]), int(sys.argv[3]))))
+        print("{} - {} = {}".format(m, n, sub(m, n)))
     elif sys.argv[2] == "*":
-        print("{} * {} = {}".format(int(sys.argv[1]), int(sys.argv[3]), mul(int(sys.argv[1]), int(sys.argv[3]))))
+        print("{} * {} = {}".format(m, n, mul(m, n)))
     elif sys.argv[2] == "/":
-        print("{} / {} = {}".format(int(sys.argv[1]), int(sys.argv[3]), div(int(sys.argv[1]), int(sys.argv[3]))))
+        print("{} / {} = {}".format(m, n, div(m, n)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
